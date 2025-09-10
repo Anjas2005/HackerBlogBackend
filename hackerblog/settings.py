@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'hackerblog.wsgi.application'
 DATABASE_URL=os.environ.get("DATABASE_URL",f"sqlite:///{BASE_DIR/ 'db.sqlite3'}")
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://hackerblog_db_user:GZFWGZFKjxEyxTgma9UXjoTVJbPzWOE0@dpg-d30oeb6mcj7s73ea6kk0-a.singapore-postgres.render.com/hackerblog_db',
+        default=os.environ.get("DATABASE_URL"),
         conn_max_age=600
     )
 }
