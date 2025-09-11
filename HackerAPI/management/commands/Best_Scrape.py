@@ -71,7 +71,8 @@ class Command(BaseCommand):
                         story.append(results)
                 json_response=json.dumps(story,indent=4)
                 print(json_response)
-                target_url="http://127.0.0.1:8000/BackendAPI/RecieveNews/"
+                # target_url="http://127.0.0.1:8000/BackendAPI/RecieveNews/"
+                target_url="https://hackerblogbackend.onrender.com/BackendAPI/RecieveNews/"
 
                 try:
                     response= requests.post(target_url,json=story)
